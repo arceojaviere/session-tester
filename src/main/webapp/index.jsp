@@ -57,6 +57,7 @@
 				<h4>Host: <span class="host"><%= java.net.InetAddress.getLocalHost().getHostName() %></span></h4>
 			</div>
 			<div class="panel panel-opcionales">
+				<h4>Agregar Atributos de sesi&oacute;n</h4>
 				<form action="./" method="post">
 					<div class="panel-body">
 						<div class="contenedor-input"><h5>Atributo:</h5><input type="text" name="variable" class="form-control"/></div>
@@ -69,7 +70,7 @@
 				<table class="table table-striped">
 					<thead>
 						<tr>
-							<th>Atributos de sesi&oacute;n</th>
+							<th><h4>Atributos de sesi&oacute;n</h4></th>
 						</tr>
 						<tr>
 							<th>
