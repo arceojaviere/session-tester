@@ -1,0 +1,307 @@
+/* ---------------- Fuentes ------------------- */
+
+@font-face{
+	font-family: SoberanaTitular-Bold;
+	src: url('../fonts/SoberanaTitular-Bold.otf');
+}
+
+@font-face{
+	font-family: Segoe UI;
+	src: url('../fonts/segoeui.ttf');
+}
+
+
+/*--------------------------------------------- */
+
+
+/* ----------------- Cuerpo ------------------- */
+
+body {
+	margin-top: 250px;
+	background-image: url('../imagenes/SCD_Sitio_pattern_back.png');
+	background-repeat: repeat;
+}
+
+@media (max-width:991px){
+	body{
+		margin-top: 310px;
+	}
+
+}
+
+@media (max-width:767px){
+	body{
+		margin-top: 250px;
+	}
+
+}
+
+/*--------------------------------------------- */
+
+
+
+
+/* ------------- Google maps ------------------ */
+
+#map-canvas {
+  height: 100%;
+  margin: 0px;
+  padding: 0px
+}
+
+/*--------------------------------------------- */
+
+
+
+
+/* -------------- Encabezado ------------------ */
+
+.page-header{
+	margin-top: 0;
+	padding-bottom: 0px;
+	margin-bottom: 20px;	
+}
+
+
+.navbar{
+	min-height: 60px;
+}
+.encabezado-fixed{
+	top:0;
+	position:fixed;
+	right:0;
+	left:0;
+	z-index:1030;
+	background-color: #FFFFFF;
+}
+.columna-central-encabezados{
+	width: 1200px; 
+	background-color: #FFFFFF;
+	background-image: url('../imagenes/SCD_Sitio_lup.png');
+	background-repeat: no-repeat;
+	background-position: 100%;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 
+				0 1px 10px rgba(0, 0, 0, 0.3);
+}
+.page-header{
+	border: none;
+}
+
+.tabla-encabezado{
+	background: repeating-linear-gradient(
+	  -10deg,
+	  #eceeed 2px,
+	  transparent 6px
+	);
+	height: 160px;
+}
+
+.imagen-encabezado{
+	
+}
+
+.texto-encabezado{
+	font-family: SoberanaTitular-Bold;
+	color: #596657;
+	font-size: 26pt;
+	text-align: center; 
+	
+}
+.texto-encabezado .capital{
+	font-size: 30pt;
+}
+
+@media (max-width:1200px){
+	
+	.columna-central-encabezados > table{
+		width: 1000px; 
+
+	}
+	
+	.columna-central-encabezados{
+		width: 1000px; 
+
+	}
+	
+	.imagen-encabezado{
+		width: 250px;
+		height: 75px;
+	}
+	
+	.texto-encabezado{
+		font-size: 18pt;
+	}
+	
+	.texto-encabezado .capital{
+		font-size: 20pt;
+	}
+
+}
+
+@media (max-width:991px){
+	
+	.columna-central-encabezados > table{
+		width: 800px; 
+
+	}
+	
+	.columna-central-encabezados{
+		width: 800px; 
+
+	}
+	
+	.imagen-encabezado{
+		width: 200px;
+		height: 60px;
+	}
+	
+	.texto-encabezado{
+		font-size: 18pt;
+	}
+	
+	.texto-encabezado .capital{
+		font-size: 20pt;
+	}
+
+}
+
+@media (max-width:767px){
+	.columna-central-encabezados > table{
+		width: 100%; 
+
+	}
+	
+	.columna-central-encabezados{
+		width: auto; 
+
+	}
+	
+	.imagen-encabezado{
+		display: none;
+	}
+	
+	.texto-encabezado{
+		font-size: 18pt;
+	}
+	
+	.texto-encabezado .capital{
+		font-size: 20pt;
+	}
+
+}
+
+.contenedor-encabezado{
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/*--------------------------------------------- */
+
+
+
+
+/* ----------- Paneles y contenido ------------ */
+
+.panel-informacion{
+	padding-left: 15px;
+	padding-right: 10px;
+	background: none;
+	border-width: 3px;
+	font-family: Segoe UI;
+	text-align: justify;
+}
+.segoe{
+	font-family: Segoe UI;
+}
+.panel-obligatorios{
+	border-color: #c9edc1;
+	border-width: 3px;
+}
+
+.panel-obligatorios .form-control:focus{
+	border-color: #c9edc1;
+	-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(118,237,92,.6);
+	box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(118,237,92,.6);
+}
+
+
+.panel-opcionales{
+	border-color: #c9edb1;
+	border-width: 3px;
+}
+
+.panel-opcionales .form-control:focus{
+	border-color: #c9edc1;
+	-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(118,237,92,.6);
+	box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(118,237,92,.6);
+}
+.form-control{
+	margin-bottom: 5px;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+
+.form-control{
+	padding: 6px 2px;
+}
+
+.contenedor-input{
+	display: inline;
+	padding-right: 30px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.contenedor-captcha{
+	max-width:200px; 
+	width:200px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.boton-ubicacion{
+	background:url('../imagenes/lupa.png');
+	background-size:20px 20px;
+	width:20px;
+	height:20px;
+	border-style:none
+}
+
+.boton-ubicacion-no-disponible{
+	background:url('../imagenes/no.png');
+	background-size:20px 20px;
+	width:20px;
+	height:20px;
+	border-style:none
+}
+
+.contenido-estatico{
+	font-size: 12pt;
+}
+
+.pregunta-faq{
+	font-weight: bold;
+}
+
+.telefono{
+	font-weight: bold;
+}
+.error-campo{
+	display:inline;
+	color:#ff5151;
+	font-weight: bolder;
+}
+/*--------------------------------------------- */
