@@ -407,7 +407,7 @@
                             <module-option name="urlServicio" value="https://login.everest.sat.gob.mx:2050/authentication"/>
                         </login-module>
                     </authentication>
-                </security-domain
+                </security-domain>
                 <security-domain name="other" cache-type="default">
                     <authentication>
                         <login-module code="Remoting" flag="optional">
