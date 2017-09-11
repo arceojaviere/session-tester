@@ -133,11 +133,11 @@
         <subsystem xmlns="urn:jboss:domain:datasources:4.0">
             <datasources>
                 <datasource jta="true" jndi-name="java:/AgsDatasource" pool-name="AgsDatasource" enabled="true" use-java-context="true">
-                     <connection-url>${env.ORACLE_URL}</connection-url>
-                     <driver>oracle</driver> 
+                     <connection-url>${env.DATASOURCE_URL}</connection-url>
+                     <driver>${env.DATASOURCE_DRIVER}</driver> 
                      <security> 
-                         <user-name>${env.ORACLE_USER}</user-name> 
-                         <password>${env.ORACLE_PASSWORD}</password> 
+                         <user-name>${env.DATASOURCE_USER}</user-name> 
+                         <password>${env.DATASOURCE_PASSWORD}</password> 
                      </security> 
                 </datasource>
                 <!-- ##DATASOURCES## -->
