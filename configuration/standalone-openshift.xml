@@ -132,6 +132,14 @@
         <subsystem xmlns="urn:jboss:domain:bean-validation:1.0"/>
         <subsystem xmlns="urn:jboss:domain:datasources:4.0">
             <datasources>
+                <datasource jta="true" jndi-name="java:/AgsDatasource" pool-name="AgsDatasource" enabled="true" use-java-context="true">
+                     <connection-url>${env.ORACLE_URL}</connection-url>
+                     <driver>oracle</driver> 
+                     <security> 
+                         <user-name>${env.ORACLE_USER}</user-name> 
+                         <password>${env.ORACLE_PASSWORD}</password> 
+                     </security> 
+                </datasource>
                 <!-- ##DATASOURCES## -->
                 <drivers>
                     <driver name="h2" module="com.h2database.h2">
@@ -144,6 +152,9 @@
                         <xa-datasource-class>org.postgresql.xa.PGXADataSource</xa-datasource-class>
                     </driver>
                     <!-- ##DRIVERS## -->
+                    <driver name="oracle" module="com.oracle.ojdbc6">
+                        <xa-datasource-class>oracle.jdbc.xa.client.OracleXADataSource</xa-datasource-class>
+                    </driver>
                 </drivers>
             </datasources>
         </subsystem>
@@ -378,7 +389,7 @@
                 <security-domain name="ags-ws-domain" cache-type="default">
                     <authentication>
                         <login-module name="SatJsonService" code="gob.sat.poc.login.ServicioJsonLoginModule" flag="required" module="org.sat.login">
-                            <module-option name="urlServicio" value="https://login.everest.sat.gob.mx:2050/authentication"/>
+                            <module-option name="urlServicio" value="${env.URL_SERVICIO}"/>
                         </login-module>
                     </authentication>
                 </security-domain>
