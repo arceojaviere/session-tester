@@ -11,6 +11,17 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+    
+    <distributionManagement>
+		<repository>
+			<id>nexus</id>
+			<url>http://sonatype-nexus.backoffice.svc.cluster.local:8081/repository/sat/</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus</id>
+			<url>http://sonatype-nexus.backoffice.svc.cluster.local:8081/repository/sat-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 	<dependencies>
 		
@@ -60,6 +71,33 @@
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 					<warName>probador-replicacion-sesiones</warName>
 				</configuration>
+			</plugin>
+			
+			<!-- Analisis de calidad de codigo y cobertura -->
+			 <plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.0.1</version>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.7.6.201602180812</version>
+				<executions>
+					<execution>
+						<id>default-prepare-agent</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>default-report</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
