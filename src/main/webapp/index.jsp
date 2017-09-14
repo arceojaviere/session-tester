@@ -24,6 +24,7 @@
 	<body>
 		<div class="container" role="main">
 			<div class="panel panel-opcionales">
+				<h4>PRUEBA DE REPLICACI&oacute;n</h4>
 				<table class="table table-striped">
 					<thead>
 						<tr>
