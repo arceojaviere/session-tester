@@ -17,11 +17,11 @@
 	<distributionManagement>
 		<repository>
 			<id>nexus</id>
-			<url>http://sonatype-nexus.backoffice.svc.cluster.local:8081/repository/sat/</url>
+			<url>${env.DISTRIBUTION_RELEASE_REPO}</url>
 		</repository>
 		<snapshotRepository>
 			<id>nexus</id>
-			<url>http://sonatype-nexus.backoffice.svc.cluster.local:8081/repository/sat-snapshots/</url>
+			<url>${env.DISTRIBUTION_SNAPSHOT_REPO}</url>
 		</snapshotRepository>
 	</distributionManagement>
 

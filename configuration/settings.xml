@@ -11,7 +11,7 @@
       <!--This sends everything else to /public -->
       <id>nexus</id>
       <mirrorOf>*</mirrorOf>
-      <url>http://nexus-repository-manager.backoffice.svc.cluster.local:8081/repository/openshift-mirror/</url>
+      <url>${env.MAVEN_MIRROR_URL}</url>
     </mirror>
   </mirrors>
   <profiles>
